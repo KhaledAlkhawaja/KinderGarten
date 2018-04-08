@@ -1,0 +1,178 @@
+/******************font style *******************/
+@font-face{
+  font-family: myfont;
+  src:url('../fonts/GE_SS_Two_Bold.otf');
+  
+}
+a:hover{
+  text-decoration-line: none; 
+}
+/************** nav bar تغيير لون خلفية ال  *******************/
+.navbar-default {
+  background-color: #16505b;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.507);
+  border:none;
+}
+/************* a تغيير لون النص في عناصر ال  **************/
+.navbar-default .navbar-nav > li > a 
+{
+  color: #eee;
+  font-size: 11px;
+  font-weight: bolder;
+  transition-duration: 0.5s;
+
+}
+.navbar-default .navbar-nav>li>a:hover
+{
+    color:white;
+    transition-duration: 0.5s;
+    background-color:#103138;
+}
+.navbar-default .navbar-nav>li>a:focus
+{
+color: white;
+border-bottom: solid 2px rgba(201, 60, 55, 0.999);
+}
+.navbar-default .navbar-nav .dropdown>a:focus {
+  background-color: rgba(238, 130, 238, 0);
+  color: white;
+  border-bottom: solid 2px rgba(201, 60, 55, 0.999);
+}
+
+/*********** brand تغيير لون ال   ************/
+.navbar-default .navbar-brand 
+{
+  transition-duration: 0.5s;
+  width: 220px;
+  height: 45px;
+  margin: 5px;
+  padding: 0;
+  left: 0;
+}
+.navbar-default .navbar-brand:hover 
+{
+  width: 250px;
+  height: 45px;
+  transition-duration: 0.5s;
+}
+/************* slider *******************/
+.slider > div
+{
+  display:none;
+  width: 100%;
+}
+.slider .active 
+{ 
+  margin-top:55.4px;
+  width: 100%;
+}
+/***** search ***********/
+.search1
+{
+ background: url(sea.svg);
+ background-repeat:no-repeat; 
+ width: 29px;
+ padding-left: 31px;
+ border: none;
+ margin-top:11px;
+ margin-left: 5px;
+ padding-top:6px;
+ padding-bottom: 7px;
+ transition-duration: .7s;
+cursor: pointer;
+}
+.search1:focus
+{
+color: white;
+background-color:rgba(238, 238, 238, 0.664);
+background-repeat: none;
+width: 250px;
+transition-duration: .7s;
+border: none;
+}
+/******** end search **************/
+/******* posts **********/
+.div1
+{
+  background-color : #eee;
+  font-size:14px;
+  width: 100%;
+  height: 100%;
+}
+.well{
+  font-size:14px;
+  transition-duration: .5s;
+  color: white;
+  background-color:#16505b;   
+}
+.well:hover
+{
+  color: white;
+  background-color:#103138;
+  transition-duration: .5s; 
+}
+.well>ul>li>a 
+{
+  color: rgba(255, 255, 255, 0.753);
+}
+.ulClass{
+  direction: rtl;
+}
+.ulClass > li {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  font-size: 17px;
+}
+/*************************************************************/
+/********************* ads page style  ************************/
+.ad
+{
+  background-color: white;
+  border-radius:15px; 
+  text-align: justify;
+  font-size: 1px;
+}
+/********** footer style **************/
+.myfooter{
+ background-color: #103138;
+  color: azure;
+text-align: right;
+}
+.myfooter a{
+  color:rgba(255, 255, 255, 0.753);
+}
+/************************************************************/
+/**********************login style ***************************/
+.login-ul{
+  background-color: rgba(238, 236, 234, 0.705);
+  height: 200px;
+  width: 300px;
+}
+.form{
+  width: 70%;
+  margin-left: 45px;
+  margin-top:20px; 
+}
+.dropdown ul.dropdown-menu {
+  border-radius: 4px;
+  margin-top: 4px;
+}
+/*****************************************************************************/
+textarea{
+  resize: none;
+}
+.comment-wrapper .panel-body {
+    max-height:650px;
+    overflow:auto;
+}
+
+.comment-wrapper .media-list .media img {
+    width:64px;
+    height:64px;
+    border:2px solid #e5e7e8;
+}
+
+.comment-wrapper .media-list .media {
+    border-bottom:1px dashed #efefef;
+    margin-bottom:25px;
+}
