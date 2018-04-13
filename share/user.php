@@ -85,6 +85,7 @@ if (isset($_SESSION['admins']) || isset($_SESSION['teachers']) || isset($_SESSIO
         else if ($go == 'Edit') {
 
             $id = isset($_GET['id']) && is_numeric($_GET['id']) ? intval($_GET['id']) : 0 ;
+            
             $stmt = $con->prepare("SELECT * FROM users WHERE user_id =? LIMIT 1");
 
             $stmt->execute(array($id));

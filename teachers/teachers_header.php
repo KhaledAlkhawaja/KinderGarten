@@ -50,7 +50,7 @@ session_start();
 </a>    
             </li>
             <li >
-     <a href="insert.php" class="borderbottom">
+     <a href="../teachers/insert.php" class="borderbottom">
        <span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;  اضافة منشور  </a>
                     </li>
 

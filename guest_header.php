@@ -23,53 +23,47 @@ session_start();
     require_once('share/connect.php');
     
     require_once('share/func.php');
-if ($_SERVER['REQUEST_METHOD'] == 'POST')
-{
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['user'];
     $pass = $_POST['pass'];
 
     $stmt = $con->prepare("SELECT * FROM users WHERE user_name = ? AND user_pass =? LIMIT 1");
 
-    $stmt->execute(array($username ,$pass));
-   
+    $stmt->execute(array($username, $pass));
+
     $count = $stmt->rowCount();
-   
+
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
-   
-    if ($count > 0)
-    {
-        if ($result['user_name']==$username && $result['user_pass']==$pass && ($result['account_type'] == 1 || $result['account_type'] == 3 || $result['account_type'] == 4) ) // admin
+
+    if ($count > 0) {
+        if ($result['user_name'] == $username && $result['user_pass'] == $pass && ($result['account_type'] == 1 || $result['account_type'] == 3 || $result['account_type'] == 4)) // admin
         {
             $_SESSION['admins'] = $username;
             $_SESSION['id'] = $result['user_id'];
             header('Location: admins/');
             exit();
-        }
-         elseif ($result['user_name']==$username && $result['user_pass']==$pass && $result['account_type'] == 2) // student
+        } elseif ($result['user_name'] == $username && $result['user_pass'] == $pass && $result['account_type'] == 2) // student
         {
             $_SESSION['teachers'] = $username;
             $_SESSION['id'] = $result['user_id'];
             header('Location: teachers/');
             exit();
-        }
-        elseif ($result['user_name']==$username && $result['user_pass']==$pass && $result['account_type'] == 5) // tech
+        } elseif ($result['user_name'] == $username && $result['user_pass'] == $pass && $result['account_type'] == 5) // tech
         {
             $_SESSION['user'] = $username;
             $_SESSION['id'] = $result['user_id'];
             header('Location: users/');
             exit();
         }
-        else {
-            // error user name or password
-        }
     }
-    else 
-    {
-        $errors = "Sory You Cant Browse this Page Direc";
-        homepages($errors,6);
+    else {
+        // error user name or password
+        $errors = "The name or password Error !!";
+        homepages($errors, 6);
     }
-    
 }
+
+
 ?>
 
 <!DOCTYPE html>
